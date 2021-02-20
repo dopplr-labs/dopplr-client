@@ -114,6 +114,15 @@ body {
   @apply antialiased;
 }
 
+.side-bar-link-selected {
+  @apply relative;
+
+  &::after {
+    @apply absolute top-0 left-0 bottom-0 bg-brand-primary w-1;
+    content: '';
+  }
+}
+
 .queries-tab {
   .ant-tabs-content-holder,
   .ant-tabs-content {

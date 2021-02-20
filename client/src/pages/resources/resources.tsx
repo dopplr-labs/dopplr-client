@@ -76,7 +76,7 @@ export default function Resources() {
       sidebar={
         <PageSideBar
           title="Resources"
-          description="Connect with your preferred database and fetch data to render in Tables"
+          description="Connect with your preferred database and fetch data"
           primaryAction={
             pathname !== '/resources' ? (
               <Link to="/resources" className="block mt-4">

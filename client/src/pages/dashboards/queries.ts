@@ -33,7 +33,9 @@ export async function fetchDashboardChart(id: number): Promise<DashboardChart> {
 
 export async function createCategory({
   name,
-}: Partial<Category>): Promise<Category> {
+}: {
+  name: string
+}): Promise<Category> {
   const { data } = await client.post<{ success: true; data: Category }>(
     '/dashboards/categories',
     { name },
@@ -45,7 +47,11 @@ export async function createDashboard({
   name,
   description,
   category,
-}: Partial<Dashboard>): Promise<Dashboard> {
+}: {
+  name: string
+  description?: string
+  category: number
+}): Promise<Dashboard> {
   const { data } = await client.post<{ success: boolean; data: Dashboard }>(
     '/dashboards',
     { name, description, category },
