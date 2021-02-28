@@ -10,6 +10,7 @@ import { ChartsModule } from './charts/charts.module'
 import { DashboardChartsModule } from './dashboard-charts/dashboard-charts.module'
 import { DashboardsModule } from './dashboards/dashboards.module'
 import { SettingsModule } from './settings/settings.module'
+import { OnboardModule } from './onboard/onboard.module';
 
 @Module({
   imports: [
@@ -36,6 +37,7 @@ import { SettingsModule } from './settings/settings.module'
     DashboardChartsModule,
     DashboardsModule,
     SettingsModule,
+    OnboardModule,
   ],
 })
 export class AppModule implements NestModule {

@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { Button, Dropdown, Menu } from 'antd'
 import AuthContext from 'contexts/auth-context'
 
@@ -7,12 +8,14 @@ export default function Navbar() {
 
   return (
     <div className="relative z-50 flex items-center h-12 px-8 shadow-xl bg-brand-dark">
-      <img
-        src={require('images/logo-transparent.svg').default}
-        alt="Dopplr"
-        className="w-8 h-8 mr-2"
-      />
-      <div className="text-base font-bold text-white">Dopplr</div>
+      <Link to="/" className="flex items-center">
+        <img
+          src={require('images/logo-transparent.svg').default}
+          alt="Dopplr"
+          className="w-8 h-8 mr-2"
+        />
+        <div className="text-base font-bold text-white">Dopplr</div>
+      </Link>
       <div className="flex-1" />
       {user ? (
         <Dropdown

@@ -7,6 +7,7 @@ import Route from 'components/route'
 import Auth from 'components/auth'
 import AppShell from 'components/app-shell'
 import Home from 'pages/home'
+import Onboarding from 'pages/onboard'
 import ResourcesList from 'pages/resources/components/resources-list'
 import CreateResource from 'pages/resources/components/create-resource'
 import ResourceDetail from 'pages/resources/components/resource-detail'
@@ -42,6 +43,7 @@ export function App() {
               <Route element={<Login />} path="/login" />
               <Route protectedRoute element={<AppShell />} path="/">
                 <Route protectedRoute element={<Home />} path="/" />
+                <Route protectedRoute element={<Onboarding />} path="onboard" />
                 <Route protectedRoute element={<Resources />} path="resources">
                   <Route protectedRoute path="/" element={<ResourcesList />} />
                   <Route
